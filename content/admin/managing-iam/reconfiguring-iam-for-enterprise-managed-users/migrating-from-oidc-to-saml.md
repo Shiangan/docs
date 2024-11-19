@@ -25,11 +25,8 @@ Then, you will configure SAML and SCIM. At this time, users, groups, and identit
 
 If you're new to {% data variables.product.prodname_emus %} and haven't yet configured authentication for your enterprise, you do not need to migrate and can set up SAML single sign-on (SSO) immediately. For more information, see "[AUTOTITLE](/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/configuring-saml-single-sign-on-for-enterprise-managed-users)."
 
-{% warning %}
-
-**Warning:** {% data reusables.enterprise_user_management.migration-teams-warning %}
-
-{% endwarning %}
+> [!WARNING]
+> {% data reusables.enterprise_user_management.migration-teams-warning %}
 
 ## Prerequisites
 
@@ -40,10 +37,10 @@ If you're new to {% data variables.product.prodname_emus %} and haven't yet conf
 ## Migrating your enterprise
 
 {% data reusables.emus.sign-in-as-setup-user %}
-{% data reusables.enterprise-accounts.access-enterprise %}
-{% data reusables.enterprise-accounts.settings-tab %}
+{% data reusables.enterprise-accounts.access-enterprise-emu %}
 {% data reusables.emus.use-enterprise-recovery-code %}
-{% data reusables.enterprise-accounts.security-tab %}
-1. Deselect **Require OIDC single sign-on**.
-1. Click **Save**.
-1. Configure SAML authentication and SCIM provisioning. For more information, see [Tutorial: Microsoft Entra single sign-on (SSO) integration with GitHub Enterprise Managed User](https://learn.microsoft.com/entra/identity/saas-apps/github-enterprise-managed-user-tutorial) on Microsoft Learn.
+{% data reusables.enterprise-accounts.identity-provider-tab %}
+{% data reusables.enterprise-accounts.sso-configuration %}
+1. Deselect **OIDC single sign-on**.
+1. Confirm and click **Disable OIDC single sign-on**.
+1. Configure SAML authentication and SCIM provisioning. See [Tutorial: Microsoft Entra single sign-on (SSO) integration with GitHub Enterprise Managed User](https://learn.microsoft.com/entra/identity/saas-apps/github-enterprise-managed-user-tutorial) on Microsoft Learn.

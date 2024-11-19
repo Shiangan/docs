@@ -70,16 +70,17 @@ For an introduction to {% data variables.product.prodname_dependabot_alerts %}, 
 
 To learn how to interpret and resolve {% data variables.product.prodname_dependabot_alerts %}, see "[AUTOTITLE](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts)."
 
-{% note %}
-
-**Note:** If you enabled {% data variables.product.prodname_dependabot_security_updates %}, {% data variables.product.prodname_dependabot %} can also automatically raise pull requests to update the dependencies used in the repositories of the organization. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates)."
-
-{% endnote %}
+> [!NOTE]
+> If you enabled {% data variables.product.prodname_dependabot_security_updates %}, {% data variables.product.prodname_dependabot %} can also automatically raise pull requests to update the dependencies used in the repositories of the organization. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates)."
 
 ## Next steps
 
-If you are using the {% data variables.product.prodname_github_security_configuration %}, and your findings indicate the security enablement settings are not meeting your needs, you should create a {% data variables.product.prodname_custom_security_configuration %}. To get started, see "[AUTOTITLE](/code-security/securing-your-organization/meeting-your-specific-security-needs-with-custom-security-configurations/creating-a-custom-security-configuration)."
+{% ifversion security-configurations-cloud %}
 
-If you are using a {% data variables.product.prodname_custom_security_configuration %}, and your findings indicate the security enablement settings are not meeting your needs, you can edit your existing configuration. For more information, see "[AUTOTITLE](/code-security/securing-your-organization/managing-the-security-of-your-organization/editing-a-custom-security-configuration)."
+If you are using the {% data variables.product.prodname_github_security_configuration %}, and your findings indicate the security enablement settings are not meeting your needs, you should create a {% data variables.product.prodname_custom_security_configuration %}. To get started, see "[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/creating-a-custom-security-configuration)."
+
+{% endif %}
+
+If {% ifversion security-configurations-cloud %}you are using a {% data variables.product.prodname_custom_security_configuration %}, and {% endif %}your findings indicate the security enablement settings are not meeting your needs, you can edit your existing configuration. For more information, see "[AUTOTITLE](/code-security/securing-your-organization/managing-the-security-of-your-organization/editing-a-custom-security-configuration)."
 
 Lastly, you can also edit your organization-level security settings with {% data variables.product.prodname_global_settings %}. To learn more, see "[AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/configuring-global-security-settings-for-your-organization)."

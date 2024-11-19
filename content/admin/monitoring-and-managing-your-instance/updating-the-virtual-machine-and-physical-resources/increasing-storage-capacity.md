@@ -23,11 +23,8 @@ As more users join {% data variables.location.product_location %}, you may need 
 
 ## Requirements and recommendations
 
-{% note %}
-
-**Note:** Before resizing any storage volume, put your instance in maintenance mode.{% ifversion ip-exception-list %} You can validate changes by configuring an IP exception list to allow access from specified IP addresses. {% endif %} For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
-
-{% endnote %}
+> [!NOTE]
+> Before resizing any storage volume, put your instance in maintenance mode.{% ifversion ip-exception-list %} You can validate changes by configuring an IP exception list to allow access from specified IP addresses. {% endif %} For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 
 ### Minimum recommended requirements
 
@@ -68,11 +65,8 @@ Root storage refers to the total size of your instance's root disk. The availabl
 
 ## Increasing the root partition size using an existing appliance
 
-{% warning %}
-
-**Warning:** Before increasing the root partition size, you must put your instance in maintenance mode. For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
-
-{% endwarning %}
+> [!WARNING]
+> Before increasing the root partition size, you must put your instance in maintenance mode. For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/enabling-and-scheduling-maintenance-mode)."
 
 1. Attach a new disk to your {% data variables.product.prodname_ghe_server %} appliance.
 1. Run the `lsblk` command to identify the new disk's device name.
@@ -94,6 +88,12 @@ Root storage refers to the total size of your instance's root disk. The availabl
 
    ```shell
    ghe-upgrade PACKAGE-NAME.pkg -s -t /dev/xvdg1
+   ```
+
+1. Run the command on the secondary partition of the newly added disk:
+
+   ```shell
+   sudo mkfs.ext4 -L fallback /dev/xvdg2
    ```
 
 1. Shut down the appliance:

@@ -55,20 +55,17 @@ To reduce the size of your CODEOWNERS file, consider using wildcard patterns to 
 
 ## CODEOWNERS syntax
 
-{% warning %}
-
-**Warning:** There are some syntax rules for gitignore files that _do not work_ in CODEOWNERS files:
-* Escaping a pattern starting with `#` using `\` so it is treated as a pattern and not a comment doesn't work
-* Using `!` to negate a pattern doesn't work
-* Using `[ ]` to define a character range doesn't work
-
-{% endwarning %}
+> [!WARNING]
+> There are some syntax rules for gitignore files that _do not work_ in CODEOWNERS files:
+> * Escaping a pattern starting with `#` using `\` so it is treated as a pattern and not a comment doesn't work
+> * Using `!` to negate a pattern doesn't work
+> * Using `[ ]` to define a character range doesn't work
 
 A CODEOWNERS file uses a pattern that follows most of the same rules used in [gitignore](https://git-scm.com/docs/gitignore#_pattern_format) files. The pattern is followed by one or more {% data variables.product.prodname_dotcom %} usernames or team names using the standard `@username` or `@org/team-name` format. Users and teams must have explicit `write` access to the repository, even if the team's members already have access.
 
 If you want to match two or more code owners with the same pattern, all the code owners must be on the same line. If the code owners are not on the same line, the pattern matches only the last mentioned code owner.
 
-{% ifversion fpt or ghec%}In most cases, you{% else %}You{% endif %} can also refer to a user by an email address that has been added to their account, for example `user@example.com`. {% ifversion fpt or ghec %} You cannot use an email address to refer to a {% data variables.enterprise.prodname_managed_user %}. For more information about {% data variables.enterprise.prodname_managed_users %}, see "[AUTOTITLE](/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/about-enterprise-managed-users){% ifversion fpt %}" in the {% data variables.product.prodname_ghe_cloud %} documentation.{% else %}."{% endif %}{% endif %}
+{% ifversion fpt or ghec %}In most cases, you{% else %}You{% endif %} can also refer to a user by an email address that has been added to their account, for example `user@example.com`. {% ifversion fpt or ghec %} You cannot use an email address to refer to a {% data variables.enterprise.prodname_managed_user %}. For more information about {% data variables.enterprise.prodname_managed_users %}, see "[AUTOTITLE](/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/about-enterprise-managed-users){% ifversion fpt %}" in the {% data variables.product.prodname_ghe_cloud %} documentation.{% else %}."{% endif %}{% endif %}
 
 CODEOWNERS paths are case sensitive, because {% data variables.product.prodname_dotcom %} uses a case sensitive file system. Since CODEOWNERS are evaluated by {% data variables.product.prodname_dotcom %}, even systems that are case insensitive (for example, macOS) must use paths and files that are cased correctly in the CODEOWNERS file.
 
@@ -152,17 +149,14 @@ apps/ @octocat
 
 Repository owners can update branch protection rules to ensure that changed code is reviewed by the owners of the changed files. Edit your branch protection rule and enable the option "Require review from Code Owners". For more information, see "[AUTOTITLE](/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)."
 
-{% note %}
-
-**Note:** When reviews from code owners are required, an approval from _any_ of the owners is sufficient to meet this requirement. For example, let's say that your CODEOWNERS file contains the following line:
-
-```text
-*.js     @global-owner1 @global-owner2
-```
-
-This means that changes to JavaScript files could be approved by either `@global-owner1` _or_ `@global-owner2`, but approvals from _both_ are not required.
-
-{% endnote %}
+> [!NOTE]
+> When reviews from code owners are required, an approval from _any_ of the owners is sufficient to meet this requirement. For example, let's say that your CODEOWNERS file contains the following line:
+>
+> ```text
+> *.js     @global-owner1 @global-owner2
+> ```
+>
+> This means that changes to JavaScript files could be approved by either `@global-owner1` _or_ `@global-owner2`, but approvals from _both_ are not required.
 
 To protect a repository fully against unauthorized changes, you also need to define an owner for the CODEOWNERS file itself. The most secure method is to define a CODEOWNERS file in the `.github` directory of the repository and define the repository owner as the owner of either the CODEOWNERS file (``/.github/CODEOWNERS @owner_username``) or the whole directory (``/.github/ @owner_username``).
 
