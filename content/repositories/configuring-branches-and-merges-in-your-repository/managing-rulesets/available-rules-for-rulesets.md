@@ -53,16 +53,16 @@ You can require that merges must be performed with a merge queue at the reposito
 
 You can configure various settings for your merge queue rule.
 
-* **Merge method**: Method to use when merging changes from pull requests.
-* **Build concurrency**: Limit the number of queued pull requests requesting checks and workflow runs at the same time.
+* **Merge method:** Method to use when merging changes from pull requests.
+* **Build concurrency:** Limit the number of queued pull requests requesting checks and workflow runs at the same time.
   * This setting controls when merge queue dispatches the `merge_group.checks_requested` webhook event, which triggers {% data variables.product.prodname_actions %} workflows that are configured to run on `merge_group`. For more information, see "[AUTOTITLE](/webhooks/webhook-events-and-payloads#merge_group)."
   * For example, if there are 5 pull requests added to the queue and the build concurrency setting is 3, merge queue will dispatch the `checks_requested` event for the first 3 pull requests. When it receives a result for one of those pull requests, merge queue will dispatch the event for the 4th pull request, and so on.
-* **Minimum/maximum group size**: The number of pull requests that will be merged together in a group.
-* **Wait time to meet minimum group size (minutes)**: The time the merge queue will wait after the first pull request is added to the queue for the minimum group size to be met. After this time has elapsed, the minimum group size will be ignored and a smaller group will be merged.
-* **Require all queue entries to pass required checks**:
+* **Minimum/maximum group size:** The number of pull requests that will be merged together in a group.
+* **Wait time to meet minimum group size (minutes):** The time the merge queue will wait after the first pull request is added to the queue for the minimum group size to be met. After this time has elapsed, the minimum group size will be ignored and a smaller group will be merged.
+* **Require all queue entries to pass required checks:**
     * When this setting is enabled, each item in the merge group must pass all required checks.
     * When this setting is disabled, only the commit at the head of the merge group, i.e. the commit containing changes from all of the pull requests in the group, must pass its required checks to merge.
-* **Status check timeout (minutes)**: Maximum time for a required status check to report a conclusion. After this much time has elapsed, checks that have not reported a conclusion will be assumed to have failed
+* **Status check timeout (minutes):** Maximum time for a required status check to report a conclusion. After this much time has elapsed, checks that have not reported a conclusion will be assumed to have failed
 
 {% endif %}
 
@@ -118,7 +118,7 @@ If someone chooses the **Request changes** option in a review, then that person 
 
 {% data reusables.repositories.review-policy-overlapping-commits %}
 
-Optionally, you can choose to dismiss stale pull request approvals when commits are pushed that affect the diff in the pull request. {% data variables.product.company_short %} records the state of the diff at the point when a pull request is approved. This state represents the set of changes that the reviewer approved. If the diff changes from this state (for example, because a contributor pushes new changes to the pull request branch or clicks **Update branch**, or because a related pull request is merged into the target branch), the approving review is dismissed as stale, and the pull request cannot be merged until someone approves the work again. For information about the target branch branch, see "[AUTOTITLE](/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)."
+Optionally, you can choose to dismiss stale pull request approvals when commits are pushed that affect the diff in the pull request. {% data variables.product.company_short %} records the state of the diff at the point when a pull request is approved. This state represents the set of changes that the reviewer approved. If the diff changes from this state (for example, because a contributor pushes new changes to the pull request branch or clicks **Update branch**, or because a related pull request is merged into the target branch), the approving review is dismissed as stale, and the pull request cannot be merged until someone approves the work again. For information about the target branch, see "[AUTOTITLE](/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)."
 
 Optionally, you can choose to require reviews from code owners. If you do, any pull request that modifies content with a code owner must be approved by that code owner before the pull request can be merged into the protected branch. Note that if code has multiple owners, an approval from _any_ of the code owners will be sufficient to meet this requirement. For more information, see "[AUTOTITLE](/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)."
 
@@ -129,6 +129,13 @@ For complex pull requests that require many reviews, requiring an approval from 
 {% endif %}
 
 Optionally, you can require all comments on the pull request to be resolved before it can be merged to a branch. This ensures that all comments are addressed or acknowledged before merge.
+
+{% ifversion repo-rules-merge-type %}
+> [!NOTE]
+> Allowed merge method is currently in public preview, the rule is currently non-bypassable, and subject to change.
+
+Optionally, you can require a merge type of merge, squash or rebase. This means the targeted branches may only be merged based on the allowed type. Additionally if the repository has disabled a merge method and the ruleset required a different method, the merge will be blocked. For more information, see "[AUTOTITLE](/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github)."
+{% endif %}
 
 ## Require status checks to pass before merging
 

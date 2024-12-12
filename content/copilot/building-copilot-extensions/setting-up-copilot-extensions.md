@@ -56,8 +56,8 @@ To create a {% data variables.product.prodname_copilot_extension_short %}, you n
 ## 6. Choose the availability of your {% data variables.product.prodname_copilot_extension_short %}
 
 Choose one of two visibility levels for your {% data variables.product.prodname_copilot_extension_short %}:
-* **Public**: Any user or organization account with the installation page link for the extension can install it.
-* **Private**: Only the user or organization account that created the extension can install it.
+* **Public:** Any user or organization account with the installation page link for the extension can install it.
+* **Private:** Only the user or organization account that created the extension can install it.
 
 If you make your {% data variables.product.prodname_copilot_extension_short %} public, you can then choose to list it on the {% data variables.product.prodname_marketplace %}.
 
@@ -75,7 +75,7 @@ To learn how to use your {% data variables.product.prodname_copilot_extension_sh
 
 {% data variables.product.prodname_copilot_skillsets %} contain the custom code for your {% data variables.product.prodname_copilot_extension_short %}, and integrate with a {% data variables.product.prodname_github_app %} to form the {% data variables.product.prodname_copilot_extension_short %} itself.
 
-Unlike {% data variables.product.prodname_copilot_agents_short %}, {% data variables.product.prodname_copilot_skillsets_short %} handle the logic behind prompt crafting, function evaluation, and response generation, making them an ideal choice for developers seeking quick and effective integrations with minimal effort.  For more information, see "[AUTOTITLE](/copilot/building-copilot-extensions/building-a-copilot-skillset-for-your-copilot-extension/about-copilot-skillsets)."
+Unlike {% data variables.product.prodname_copilot_agents_short %}, {% data variables.product.prodname_copilot_skillsets_short %} handle the logic behind prompt crafting, function evaluation, and response generation, making them an ideal choice for developers seeking quick and effective integrations with minimal effort. For more information, see "[AUTOTITLE](/copilot/building-copilot-extensions/building-a-copilot-skillset-for-your-copilot-extension/about-copilot-skillsets)."
 
 ## 2. Build a {% data variables.product.prodname_copilot_skillset_short %}
 
@@ -94,8 +94,8 @@ To create a {% data variables.product.prodname_copilot_extension_short %}, you n
 ## 5. Choose the availability of your {% data variables.product.prodname_copilot_skillset_short %}
 
 Choose one of two visibility levels for your {% data variables.product.prodname_copilot_extension_short %}:
-* **Public**: Any user or organization account with the installation page link for the extension can install it.
-* **Private**: Only the user or organization account that created the extension can install it.
+* **Public:** Any user or organization account with the installation page link for the extension can install it.
+* **Private:** Only the user or organization account that created the extension can install it.
 
 If you make your {% data variables.product.prodname_copilot_extension_short %} public, you can then choose to list it on the {% data variables.product.prodname_marketplace %}.
 

@@ -19,11 +19,8 @@ shortTitle: New purchases & free trials
 
 {% data reusables.marketplace.marketplace-apps-not-actions %}
 
-{% warning %}
-
-If you offer a {% data variables.product.prodname_github_app %} in {% data variables.product.prodname_marketplace %}, your app must identify users following the OAuth authorization flow. You don't need to set up a separate {% data variables.product.prodname_oauth_app %} to support this flow. See "[AUTOTITLE](/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)" for more information.
-
-{% endwarning %}
+> [!WARNING]
+> If you offer a {% data variables.product.prodname_github_app %} in {% data variables.product.prodname_marketplace %}, your app must identify users following the OAuth authorization flow. You don't need to set up a separate {% data variables.product.prodname_oauth_app %} to support this flow. See "[AUTOTITLE](/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)" for more information.
 
 ## Step 1. Initial purchase and webhook event
 
@@ -41,7 +38,7 @@ See "[AUTOTITLE](/apps/github-marketplace/using-the-github-marketplace-api-in-yo
 
 ## Step 2. Installation
 
-If your app is a {% data variables.product.prodname_github_app %}, {% data variables.product.product_name %} prompts the customer to select which repositories the app can access when they purchase it. {% data variables.product.product_name %} then installs the app on the account the customer selected  and grants access to the selected repositories.
+If your app is a {% data variables.product.prodname_github_app %}, {% data variables.product.product_name %} prompts the customer to select which repositories the app can access when they purchase it. {% data variables.product.product_name %} then installs the app on the account the customer selected and grants access to the selected repositories.
 
 At this point, if you specified a **Setup URL** in your {% data variables.product.prodname_github_app %} settings, {% data variables.product.product_name %} will redirect the customer to that URL. If you do not specify a setup URL, you will not be able to handle purchases of your {% data variables.product.prodname_github_app %}.
 
@@ -65,7 +62,7 @@ For either type of app, the first step is to redirect the customer to [https://g
 After the customer completes the authorization, your app receives an OAuth access token for the customer. You'll need this token for the next step.
 
 > [!NOTE]
-> When authorizing a customer on a free trial, grant them the same access they would have on the paid plan.  You'll move them to the paid plan after the trial period ends.
+> When authorizing a customer on a free trial, grant them the same access they would have on the paid plan. You'll move them to the paid plan after the trial period ends.
 
 ## Step 4. Provisioning customer accounts
 

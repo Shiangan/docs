@@ -103,9 +103,9 @@ To configure language settings in the `github-copilot.xml` file, you must edit t
 
 The file is located in the following directory:
 
-* **macOS**: `~/Library/Application Support/JetBrains/<product><version>/options/github-copilot.xml`
-* **Windows**: `%APPDATA%\JetBrains\<product><version>\options\github-copilot.xml`
-* **Linux**: `~/.config/JetBrains/<product><version>/options/github-copilot.xml`
+* **macOS:** `~/Library/Application Support/JetBrains/<product><version>/options/github-copilot.xml`
+* **Windows:** `%APPDATA%\JetBrains\<product><version>\options\github-copilot.xml`
+* **Linux:** `~/.config/JetBrains/<product><version>/options/github-copilot.xml`
 
 For example, if you are using IntelliJ IDEA 2021.1 on macOS, the file is located at `~/Library/Application Support/JetBrains/IdeaIC2021.1/options/github-copilot.xml`.
 
@@ -426,7 +426,7 @@ You can use the default keyboard shortcuts for inline suggestions in Xcode when 
 
 If you don't want to use the default keyboard shortcuts for {% data variables.product.prodname_copilot %}, you can rebind the shortcuts in the Key Bindings editor and use your preferred keyboard shortcuts.
 
-If you want to use something besides <kbd>Tab</kbd> to accept the first line of a suggestion, you need to disable the "Accept suggestions with Tab" option in the advanced settings in the  {% data variables.product.prodname_copilot %} for Xcode application. Additionally, we currently only support the <kbd>Option</kbd> key for the "View full suggestion" action.
+If you want to use something besides <kbd>Tab</kbd> to accept the first line of a suggestion, you need to disable the "Accept suggestions with Tab" option in the advanced settings in the {% data variables.product.prodname_copilot %} for Xcode application. Additionally, we currently only support the <kbd>Option</kbd> key for the "View full suggestion" action.
 
 1. In the Xcode menu bar, click **Settings**.
 1. Click **Key Bindings** and search for "{% data variables.product.prodname_copilot_short %}" to find the commands you want to rebind.
@@ -451,3 +451,7 @@ After updating the extension, Xcode must be restarted for the changes to take ef
 {% data reusables.copilot.dotcom-settings %}
 
 {% endxcode %}
+
+## Authenticating to an account on {% data variables.enterprise.data_residency_site %}
+
+{% data reusables.copilot.sign-in-ghecom %} See "[AUTOTITLE](/copilot/managing-copilot/configure-personal-settings/using-github-copilot-with-an-account-on-ghecom)."

@@ -211,7 +211,7 @@ Looking at the composition line by line:
 
   * The [docs](/graphql/reference/objects#repository) tell us this object has the type `IssueConnection`.
   * Schema validation indicates this object requires a `last` or `first` number of results as an argument, so we provide `20`.
-  * The [docs](/graphql/reference/objects#repository) also tell us this object accepts a `states` argument, which is an  [`IssueState`](/graphql/reference/enums#issuestate) enum that accepts `OPEN` or `CLOSED` values. To find only closed issues, we give the `states` key a value of `CLOSED`.
+  * The [docs](/graphql/reference/objects#repository) also tell us this object accepts a `states` argument, which is an [`IssueState`](/graphql/reference/enums#issuestate) enum that accepts `OPEN` or `CLOSED` values. To find only closed issues, we give the `states` key a value of `CLOSED`.
 
 * `edges {`
 
@@ -269,11 +269,8 @@ mutation AddReactionToIssue {
 }
 ```
 
-{% tip %}
-
-Although you can include a query and a mutation in the same Explorer window if you give them names (`FindIssueID` and `AddReactionToIssue` in this example), the operations will be executed as separate calls to the GraphQL endpoint. It's not possible to perform a query at the same time as a mutation, or vice versa.
-
-{% endtip %}
+> [!TIP]
+> Although you can include a query and a mutation in the same Explorer window if you give them names (`FindIssueID` and `AddReactionToIssue` in this example), the operations will be executed as separate calls to the GraphQL endpoint. It's not possible to perform a query at the same time as a mutation, or vice versa.
 
 Let's walk through the example. The task sounds simple: add an emoji reaction to an issue.
 
@@ -382,15 +379,12 @@ variables {
 }
 ```
 
-{% note %}
-
-You may notice that the `content` field value in the earlier example (where it's used directly in the mutation) does not have quotes around `HOORAY`, but it does have quotes when used in the variable. There's a reason for this:
-* When you use `content` directly in the mutation, the schema expects the value to be of type [`ReactionContent`](/graphql/reference/enums#reactioncontent), which is an _enum_, not a string. Schema validation will throw an error if you add quotes around the enum value, as quotes are reserved for strings.
-* When you use `content` in a variable, the variables section must be valid JSON, so the quotes are required. Schema validation correctly interprets the `ReactionContent` type when the variable is passed into the mutation during execution.
-
-For more information on the difference between enums and strings, see the [official GraphQL spec](https://spec.graphql.org/June2018/#sec-Enums).
-
-{% endnote %}
+> [!NOTE]
+> You may notice that the `content` field value in the earlier example (where it's used directly in the mutation) does not have quotes around `HOORAY`, but it does have quotes when used in the variable. There's a reason for this:
+> * When you use `content` directly in the mutation, the schema expects the value to be of type [`ReactionContent`](/graphql/reference/enums#reactioncontent), which is an _enum_, not a string. Schema validation will throw an error if you add quotes around the enum value, as quotes are reserved for strings.
+> * When you use `content` in a variable, the variables section must be valid JSON, so the quotes are required. Schema validation correctly interprets the `ReactionContent` type when the variable is passed into the mutation during execution.
+>
+> For more information on the difference between enums and strings, see the [official GraphQL spec](https://spec.graphql.org/June2018/#sec-Enums).
 
 ## Further reading
 

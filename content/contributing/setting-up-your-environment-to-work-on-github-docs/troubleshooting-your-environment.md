@@ -22,7 +22,7 @@ git commit --allow-empty -m 'empty commit to redeploy staging'
 git push
 ```
 
-## Troubleshooting stalled or stuck  CI
+## Troubleshooting stalled or stuck CI
 
 If your tests are stuck on "In progress" or "Pending" for more than an hour, use the commands below to rerun CI by pushing an empty commit on the command line.
 
@@ -95,13 +95,13 @@ During development, you can visit any page on `http://localhost:4000` and add `?
 
 If your text or code example includes content between curly brackets (`{` and `}`), you need to wrap it between <code>&#123% raw %&#125;</code> and <code>&#123% raw %&#125;</code> tags to disable Liquid processing for that section. For example:
 
-* **Use**:
+* **Use:**
 
   <pre>
   GITHUB_TOKEN: &#123% raw %&#125;${% raw %}{{ secrets.GITHUB_TOKEN }}{% endraw %}&#123% endraw %&#125;
   </pre>
 
-* **Avoid**:
+* **Avoid:**
 
   <pre>
   GITHUB_TOKEN: ${% raw %}${{ secrets.GITHUB_TOKEN }}${% endraw %}

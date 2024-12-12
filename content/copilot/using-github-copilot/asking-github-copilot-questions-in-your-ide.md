@@ -35,7 +35,7 @@ You can ask {% data variables.product.prodname_copilot_chat_short %} to give cod
    >
    > For additional ways to access {% data variables.product.prodname_copilot_chat_short %}, including inline with your code, see [Additional ways to access {% data variables.product.prodname_copilot_chat_short %}](#additional-ways-to-access-copilot-chat) below.
 
-1. Enter a prompt in the prompt box, or click one of the suggested prompts. For example prompts, see "[AUTOTITLE](/copilot/using-github-copilot/example-use-cases/example-prompts-for-copilot-chat)."
+1. Enter a prompt in the prompt box, or click one of the suggested prompts. For an introduction to the kinds of prompts you can use, see "[AUTOTITLE](/copilot/using-github-copilot/guides-on-using-github-copilot/getting-started-with-prompts-for-copilot-chat)."
 
 1. Evaluate {% data variables.product.prodname_copilot_short %}'s response, and make a follow up request if needed.
 
@@ -45,7 +45,7 @@ You can ask {% data variables.product.prodname_copilot_chat_short %} to give cod
 
 ## Using keywords in your prompt
 
-You can use special keywords to help {% data variables.product.prodname_copilot_short %} understand your prompt. For examples, see "[AUTOTITLE](/copilot/using-github-copilot/example-use-cases/example-prompts-for-copilot-chat)."
+You can use special keywords to help {% data variables.product.prodname_copilot_short %} understand your prompt. For examples, see "[AUTOTITLE](/copilot/using-github-copilot/guides-on-using-github-copilot/getting-started-with-prompts-for-copilot-chat)."
 
 ### Chat participants
 
@@ -62,7 +62,7 @@ Chat participants include:
 * `@terminal`: Has context about the {% data variables.product.prodname_vscode %} terminal shell and its contents. Use `@terminal` when you want help creating or debugging terminal commands.
 * `@azure`: Has context about Azure services and how to use, deploy and manage them. Use `@azure` when you want help with Azure. The `@azure` chat participant is currently in {% data variables.release-phases.public_preview %} and is subject to change.
 {% ifversion ghec %}
-* `@github`: Allows you to use {% data variables.product.prodname_dotcom %}-specific {% data variables.product.prodname_copilot_short %} skills. See "[Using {% data variables.product.prodname_dotcom %}  skills for {% data variables.product.prodname_copilot_short %}](#using-github-skills-for-copilot)."
+* `@github`: Allows you to use {% data variables.product.prodname_dotcom %}-specific {% data variables.product.prodname_copilot_short %} skills. See "[Using {% data variables.product.prodname_dotcom %} skills for {% data variables.product.prodname_copilot_short %}](#using-github-skills-for-copilot)."
 {% endif %}
 
 In addition to the built-in {% data variables.product.prodname_vscode %} chat participants, you can also install {% data variables.product.prodname_copilot_extensions_short %} that provide chat participants. You can install these extensions from [{% data variables.product.prodname_marketplace %}](https://github.com/marketplace?type=apps&copilot_app=true) and from [{% data variables.product.prodname_vscode_marketplace %}](https://marketplace.visualstudio.com/search?target=VSCode&category=Chat&sortBy=Installs). For information about extensions from {% data variables.product.prodname_marketplace %} that provide chat participants, see "[AUTOTITLE](/copilot/github-copilot-chat/github-copilot-extensions/about-github-copilot-extensions)."
@@ -167,9 +167,9 @@ You can tell {% data variables.product.prodname_copilot_short %} to answer a que
 
 In addition to submitting prompts through the chat view, you can submit prompts in other ways:
 
-* **Inline**: To start an inline chat directly in the editor or integrated terminal, enter <kbd>Command</kbd>+<kbd>i</kbd> (Mac) / <kbd>Ctrl</kbd>+<kbd>i</kbd> (Windows/Linux).
-* **Quick chat**: To open the quick chat dropdown, enter <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>i</kbd> (Mac) / <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>i</kbd> (Windows/Linux)
-* **Smart actions**: To submit prompts via the context menu, right click in your editor, select **Copilot** in the menu that appears, then select one of the actions. Smart actions can also be accessed via the sparkle icon that sometimes appears when you select a line of code.
+* **Inline:** To start an inline chat directly in the editor or integrated terminal, enter <kbd>Command</kbd>+<kbd>i</kbd> (Mac) / <kbd>Ctrl</kbd>+<kbd>i</kbd> (Windows/Linux).
+* **Quick chat:** To open the quick chat dropdown, enter <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>i</kbd> (Mac) / <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>i</kbd> (Windows/Linux)
+* **Smart actions:** To submit prompts via the context menu, right click in your editor, select **Copilot** in the menu that appears, then select one of the actions. Smart actions can also be accessed via the sparkle icon that sometimes appears when you select a line of code.
 
 See [inline chat](https://code.visualstudio.com/docs/copilot/copilot-chat#_inline-chat), [quick chat](https://code.visualstudio.com/docs/copilot/copilot-chat#_quick-chat), and [chat smart actions](https://code.visualstudio.com/docs/copilot/copilot-chat#_chat-smart-actions) in the {% data variables.product.prodname_vscode %} documentation for more details.
 
@@ -222,7 +222,7 @@ To leave feedback about the {% data variables.product.prodname_copilot_chat %} e
 You can ask {% data variables.product.prodname_copilot_chat_short %} to give code suggestions, explain code, generate unit tests, and suggest code fixes.
 
 1. In the {% data variables.product.prodname_vs %} menu bar, click **View**, then click **{% data variables.product.prodname_copilot_chat %}**.
-1. In the {% data variables.product.prodname_copilot_chat_short %} window, enter a prompt, then press **Enter**. For example prompts, see "[AUTOTITLE](/copilot/using-github-copilot/example-use-cases/example-prompts-for-copilot-chat)."
+1. In the {% data variables.product.prodname_copilot_chat_short %} window, enter a prompt, then press **Enter**. For example prompts, see "[AUTOTITLE](/copilot/using-github-copilot/guides-on-using-github-copilot/getting-started-with-prompts-for-copilot-chat)."
 1. Evaluate {% data variables.product.prodname_copilot_short %}'s response, and submit a follow up prompt if needed.
 
    The response often includes interactive elements. For example, the response may include buttons to copy, insert, or preview the result of a code block.
@@ -371,7 +371,7 @@ You can ask {% data variables.product.prodname_copilot_chat_short %} to give cod
 
    ![Screenshot of the {% data variables.product.prodname_copilot_chat_short %} icon in the Activity Bar.](/assets/images/help/copilot/jetbrains-copilot-chat-icon.png)
 
-1. Enter a prompt in the prompt box. For example prompts, see "[AUTOTITLE](/copilot/using-github-copilot/example-use-cases/example-prompts-for-copilot-chat)."
+1. Enter a prompt in the prompt box. For example prompts, see "[AUTOTITLE](/copilot/using-github-copilot/guides-on-using-github-copilot/getting-started-with-prompts-for-copilot-chat)."
 
 1. Evaluate {% data variables.product.prodname_copilot_short %}'s response, and submit a follow up prompt if needed.
 
@@ -406,7 +406,7 @@ By default, {% data variables.product.prodname_copilot_chat_short %} will refere
 
 * **Built-in requests**. In addition to submitting prompts through the chat window, you can submit built-in requests by right clicking in a file, selecting **{% data variables.product.prodname_copilot %}**, then selecting one of the options.
 * **Inline**. You can submit a chat prompt inline, and scope it to a highlighted code block or your current file.
-   * To start an inline chat, right click on a code block or anywhere in your current file, hover over **{% data variables.product.prodname_copilot %}**, then select **{% octicon "plus" aria-label="plus" %} {% data variables.product.prodname_copilot_short %}: Inline Chat**, or enter <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
+   * To start an inline chat, right click on a code block or anywhere in your current file, hover over **{% data variables.product.prodname_copilot %}**, then select **{% octicon "plus" aria-hidden="true" %} {% data variables.product.prodname_copilot_short %}: Inline Chat**, or enter <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
 
 ## Sharing feedback
 

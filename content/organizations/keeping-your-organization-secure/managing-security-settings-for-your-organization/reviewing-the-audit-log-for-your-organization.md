@@ -46,9 +46,14 @@ To search for specific events, use the `action` qualifier in your query. Actions
 | {% ifversion fpt or ghec %} |
 | `billing` | Contains all activities related to your organization's billing.
 | `business` | Contains activities related to business settings for an enterprise. |
-| `codespaces` | Contains all activities related to your organization's codespaces. |
 | {% endif %} |
+| {% ifversion fpt or ghec or ghes > 3.16 %} |
+| `code-scanning` | Contains all activities related to your organization's code scanning alerts. |
+| {% endif %} |
+| {% ifversion fpt or ghec %} |
+| `codespaces` | Contains all activities related to your organization's codespaces. |
 | `copilot` | Contains all activities related to your {% data variables.product.prodname_copilot_for_business %} or {% data variables.product.prodname_copilot_enterprise %} subscription.
+| {% endif %} |
 | `dependabot_alerts` | Contains organization-level configuration activities for {% data variables.product.prodname_dependabot_alerts %} in existing repositories. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
 | `dependabot_alerts_new_repos` | Contains organization-level configuration activities for {% data variables.product.prodname_dependabot_alerts %} in new repositories created in the organization.
 | `dependabot_security_updates` | Contains organization-level configuration activities for {% data variables.product.prodname_dependabot_security_updates %} in existing repositories. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates)."
@@ -95,7 +100,7 @@ To search for specific events, use the `action` qualifier in your query. Actions
 | `protected_branch` | Contains all activities related to protected branches.
 | `repo` | Contains activities related to the repositories owned by your organization.
 | {% ifversion fpt or ghec %} |
-| `repository_advisory` | Contains repository-level activities related to security advisories in the {% data variables.product.prodname_advisory_database %}.  For more information, see "[AUTOTITLE](/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories)."
+| `repository_advisory` | Contains repository-level activities related to security advisories in the {% data variables.product.prodname_advisory_database %}. For more information, see "[AUTOTITLE](/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories)."
 | `repository_content_analysis` | Contains all activities related to enabling or disabling data use for a private repository. For more information, see "[AUTOTITLE](/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#enabling-or-disabling-security-and-analysis-features-for-private-repositories)."
 | `repository_dependency_graph` | Contains repository-level activities related to enabling or disabling the dependency graph for a {% ifversion fpt or ghec %}private {% endif %}repository. For more information, see "[AUTOTITLE](/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph)."
 | {% endif %} |

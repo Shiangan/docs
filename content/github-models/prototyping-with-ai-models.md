@@ -6,7 +6,7 @@ versions:
   feature: github-models
 ---
 
-If you want to develop a generative AI application, you can use {% data variables.product.prodname_github_models %} to find and experiment with AI models for free. Once you are ready to bring your application to production, you can switch to a token from a paid Azure account. See the [Azure AI](https://ai.azure.com/github/model/docs) documentation.
+If you want to develop a generative AI application, you can use {% data variables.product.prodname_github_models %} to find and experiment with AI models for free. Once you are ready to bring your application to production, you can switch to a token from a paid Azure account. See the [Azure AI](https://aka.ms/azureai/github-models) documentation.
 
 See also "[AUTOTITLE](/github-models/responsible-use-of-github-models)."
 
@@ -214,7 +214,7 @@ Low, high, and embedding models have different rate limits. To see which type of
     <td>1</td>
   </tr>
   <tr>
-    <th rowspan="4" scope="rowgroup"  style="box-shadow: none"><b>Azure OpenAI o1-mini</b></th>
+    <th rowspan="4" scope="rowgroup" style="box-shadow: none"><b>Azure OpenAI o1-mini</b></th>
     <th style="padding-left: 0"><b>Requests per minute</b></th>
     <td>2</td>
     <td>3</td>

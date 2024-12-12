@@ -23,7 +23,7 @@ By default, searching users will return both personal and organizations. However
 | Qualifier        | Example
 | ------------- | -------------
 | `type:user` | [**mike in:name created:&lt;2011-01-01 type:user**](https://github.com/search?q=mike+in:name+created%3A%3C2011-01-01+type%3Auser&type=Users) matches personal accounts named "mike" that were created before 2011.
-| `type:org` | [**data in:email type:org**](https://github.com/search?q=data+in%3Aemail+type%3Aorg&type=Users) matches organizations  with the word "data" in their email.
+| `type:org` | [**data in:email type:org**](https://github.com/search?q=data+in%3Aemail+type%3Aorg&type=Users) matches organizations with the word "data" in their email.
 
 ## Search by account name, full name, or public email
 
@@ -34,7 +34,7 @@ With the `in` qualifier you can restrict your search to the username (`login`), 
 | Qualifier        | Example
 | ------------- | -------------
 | `user:name` | [**user:octocat**](https://github.com/search?q=user%3Aoctocat&type=Users) matches the user with the username "octocat".
-| `org:name` | [**org:electron type:users**](https://github.com/search?q=org%3Aelectron+type%3Ausers&type=Users) matches the Electron organization's account name.
+| `org:name` | [**org:electron type:user**](https://github.com/search?q=org%3Aelectron+type%3Ausers&type=User) matches the Electron organization's account name.
 | `in:login` | [**kenya in:login**](https://github.com/search?q=kenya+in%3Alogin&type=Users) matches users with the word "kenya" in their username.
 | `in:name` | [**bolton in:name**](https://github.com/search?q=bolton+in%3Afullname&type=Users) matches users whose real name contains the word "bolton."
 | `fullname:firstname lastname` | [**fullname:nat friedman**](https://github.com/search?q=fullname%3Anat+friedman&type=Users) matches a user with the full name "Nat Friedman." Note: This search qualifier is sensitive to spacing.
